@@ -11,15 +11,6 @@ fun <T> MutableLiveData<List<T>>.addNewItem(item: T) {
     this.value = newList
 }
 
-fun <T> MutableLiveData<List<T>>.addNewItemAt(item: T, index: Int) {
-    val newList= mutableListOf<T>()
-    this.value?.let {
-        newList.addAll(it)
-    }
-    newList.add(index, item)
-    this.value = newList
-}
-
 fun <T> MutableLiveData<List<T>>.updateItemAt(index: Int, item: T) {
     val newList = mutableListOf<T>()
     this.value?.let {
@@ -35,14 +26,5 @@ fun <T> MutableLiveData<List<T>>.removeItem(item: T) {
         newList.addAll(it)
     }
     newList.remove(item)
-    this.value = newList
-}
-
-fun <T> MutableLiveData<List<T>>.removeItemAt(index: Int) {
-    val newList = mutableListOf<T>()
-    this.value?.let {
-        newList.addAll(it)
-    }
-    newList.removeAt(index)
     this.value = newList
 }
