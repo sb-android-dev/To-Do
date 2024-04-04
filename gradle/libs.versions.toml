@@ -14,7 +14,6 @@ hilt = "2.50"
 auth = "21.0.0"
 coroutine = "1.7.3"
 coil = "2.6.0"
-serialization = "1.6.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
